@@ -16,6 +16,7 @@ nnoremap <Leader>w viw
 nnoremap <Leader>. vf.
 
 " Go to different places
+nnoremap <Leader><Leader> :action FileStructurePopup<CR>
 nnoremap <Leader>gE :action GotoNextError<CR>
 nnoremap <Leader>gd :action GotoDeclaration<CR>
 nnoremap <Leader>gf :action GotoFile<CR>
@@ -23,7 +24,6 @@ nnoremap <Leader>gc :action GotoClass<CR>
 nnoremap <Leader>gs :action GotoSymbol<CR>
 nnoremap <Leader>gi :action GotoImplementation<CR>
 nnoremap <Leader>gr :action RecentFiles<CR>
-nnoremap <Leader>gS :action FileStructurePopup<CR>
 
 nnoremap <Leader>gB :action Back<CR>
 nnoremap <Leader>gF :action Forward<CR>
