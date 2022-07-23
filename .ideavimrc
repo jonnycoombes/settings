@@ -2,6 +2,8 @@ let mapleader=","
 let g:EasyMotion_override_acejump = 0
 set easymotion
 set hlsearch
+set ideamarks
+
 
 " map out the esc key to something more useful
 inoremap jj <Esc>
@@ -16,7 +18,7 @@ nnoremap <Leader>w viw
 nnoremap <Leader>. vf.
 
 " Go to different places
-nnoremap <Leader><Leader> :action FileStructurePopup<CR>
+nnoremap <Leader>gw :action FileStructurePopup<CR>
 nnoremap <Leader>gE :action GotoNextError<CR>
 nnoremap <Leader>gd :action GotoDeclaration<CR>
 nnoremap <Leader>gf :action GotoFile<CR>
@@ -44,12 +46,18 @@ nnoremap <Leader>ff :action Find<CR>
 
 " Editing and commenting
 nnoremap <Leader>cr :action RenameElement<CR>
-nnoremap <Leader>clc :action CommentByLineComment<CR>
-nnoremap <Leader>cbc :action CommentByBlockComment<CR>
-nnoremap <Leader>cac :action EditorAddCaretPerSelectedLine
+vnoremap <Leader>l :action CommentByLineComment<CR>
+vnoremap <Leader>b :action CommentByBlockComment<CR>
+nnoremap <Leader>cac :action EditorAddCaretPerSelectedLine<CR>
 nnoremap <Leader>cd :action EditorDuplicate<CR>
 nnoremap <Leader>cS :action SilentCodeCleanup<CR>
+nnoremap <Leader>cF :action ReformatCode<CR>
+nnoremap <Leader>cP :action ReformatWithPrettierAction<CR>
 
 " Selection commands
 nnoremap <Leader>sp :action SelectInProjectView<CR>
 nnoremap <Leader>sa :action ShowIntentionActions<CR>
+
+" Folds
+nnoremap <Leader>E :action ExpandRegion<CR>
+nnoremap <Leader>C :action CollapseRegion<CR>
